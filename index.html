@@ -47,30 +47,35 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ImageRAG: Dynamic Image Retrieval for Reference-Guided Image Generation</h1>
+          <h1 class="title is-1 publication-title">Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark</h1>
           <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/yaron-aloni-1a354b11a/">Yaron Aloni</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=7ChSzWYAAAAJ&hl=iw">Rotem Shalev-Arkushin</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://rinongal.github.io">Rinon Gal</a><sup>1,2</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.cs.tau.ac.il/~amberman">Amit H. Bermano</a><sup>1</sup>,
+              <a href="https://www.linkedin.com/in/yonatan-shafir-2811a3148/">Yonatan Shafir</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.ohadf.com">Ohad Fried</a><sup>3</sup>
+              <a href="https://guytevet.github.io/">Guy Tevet</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.ohadf.com">Ohad Fried</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.tau.ac.il/~amberman">Amit H. Bermano</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Tel Aviv University,</span>
-            <span class="author-block"><sup>2</sup>NVIDIA</span>
-            <span class="author-block"><sup>3</sup>Reichman University</span>
+            <span class="author-block"><sup>2</sup>Reichman University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2502.09411"
+                <a href="arxiv_link"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -78,17 +83,8 @@
                   <span>Paper</span>
                 </a>
               </span>
-<!--              <span class="link-block">-->
-<!--                <a href="https://arxiv.org/abs/2011.12948"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="ai ai-arxiv"></i>-->
-<!--                  </span>-->
-<!--                  <span>arXiv</span>-->
-<!--                </a>-->
-<!--              </span>-->
               <span class="link-block">
-                <a href="https://github.com/rotem-shalev/ImageRAG"
+                <a href="https://github.com/jaron1990/Express4D/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -103,6 +99,41 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="item">
+          
+<!-- 
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/figures/MDM-page.mp4"
+          type="video/mp4">
+        </video>
+ -->
+
+
+        <iframe width="720" height="405" src="https://www.youtube.com/watch?v=BhBdkzao4kA&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </p>
+        </div>
+        <p style="margin-bottom: 30px">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Natural and expressive human motion generation is the holy grail of computer animation.
+It is a challenging task, due to the diversity of possible motion, human perceptual sensitivity to it, and the difficulty of accurately describing it. Therefore, current generative solutions are either low-quality or limited in expressiveness. 
+Diffusion models, which have already shown remarkable generative capabilities in other domains, are promising candidates for human motion due to their many-to-many nature, but they tend to be resource hungry and hard to control. 
+In this paper, we introduce Motion Diffusion Model (MDM), a carefully adapted classifier-free diffusion-based generative model for the human motion domain. 
+MDM is transformer-based, combining insights from motion generation literature. 
+A notable design-choice is the prediction of the sample, rather than the noise, in each diffusion step. This facilitates the use of established geometric losses on the locations and velocities of the motion, such as the foot contact loss. As we demonstrate, MDM is a generic approach, enabling different modes of conditioning, and different generation tasks. We show that our model is trained with lightweight resources and yet achieves state-of-the-art results on leading benchmarks for text-to-motion and action-to-motion.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
   </div>
 </section>
 
