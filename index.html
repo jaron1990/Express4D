@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Guiding a generative model with images as references that are retrieved dynamically to enhance the models' capabilities.">
-  <meta name="keywords" content="ImageRAG, imageRAG">
+        content="A novel database and benchmark ">
+  <meta name="keywords" content="Express4D">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ImageRAG: Dynamic Image Retrieval for Reference-Guided Image Generation</title>
+  <title>Express4D: Expressive, Friendly, and Extensible 4D Facial Motion Generation Benchmark</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src=""></script>
@@ -117,19 +117,17 @@
  -->
 
 
-        <iframe width="720" height="405" src="https://www.youtube.com/watch?v=BhBdkzao4kA&feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="720" height="405" src="https://www.youtube.com/embed/BhBdkzao4kA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </p>
         </div>
         <p style="margin-bottom: 30px">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Natural and expressive human motion generation is the holy grail of computer animation.
-It is a challenging task, due to the diversity of possible motion, human perceptual sensitivity to it, and the difficulty of accurately describing it. Therefore, current generative solutions are either low-quality or limited in expressiveness. 
-Diffusion models, which have already shown remarkable generative capabilities in other domains, are promising candidates for human motion due to their many-to-many nature, but they tend to be resource hungry and hard to control. 
-In this paper, we introduce Motion Diffusion Model (MDM), a carefully adapted classifier-free diffusion-based generative model for the human motion domain. 
-MDM is transformer-based, combining insights from motion generation literature. 
-A notable design-choice is the prediction of the sample, rather than the noise, in each diffusion step. This facilitates the use of established geometric losses on the locations and velocities of the motion, such as the foot contact loss. As we demonstrate, MDM is a generic approach, enabling different modes of conditioning, and different generation tasks. We show that our model is trained with lightweight resources and yet achieves state-of-the-art results on leading benchmarks for text-to-motion and action-to-motion.</p>
+Dynamic facial expression generation from natural language is a crucial task in Computer Graphics, with applications in Animation, Virtual Avatars, and Human-Computer Interaction. However, current generative models suffer from datasets that are either speech-driven or limited to coarse emotion labels, lacking the nuanced, expressive descriptions needed for fine-grained control, and were captured using elaborate and expensive equipment. 
+We hence present a new dataset of facial motion sequences featuring nuanced performances and semantic annotation. The data is easily collected using commodity equipment and LLM-generated natural language instructions, in the popular ARKit blendshape format. This provides riggable motion, rich with expressive performances and labels. We accordingly train two baseline models, and evaluate their performance for future benchmarking. Using 
+our Express4D dataset, the trained models can learn meaningful text-to-expression motion generation and capture the many-to-many mapping of the two modalities.
+</p>
         </div>
       </div>
     </div>
@@ -137,66 +135,19 @@ A notable design-choice is the prediction of the sample, rather than the noise, 
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <p> <br> </p>
-      <h2 class="subtitle has-text-centered">
-        Using references broadens the generation capabilities of image generation models.
-      </h2>
-      <h2 class="subtitle has-text-centered">
-        Given a text prompt, our method, <b>ImageRAG</b>, dynamically retrieves relevant images and provides them to a base text-to-image model (T2I).
-        ImageRAG works with different models, such as SDXL (A) or OmniGen (B, C), and different controls, e.g. text (A, B) or personalization (C).
-      </h2>
-    </div>
-  </div>
-</section>
 
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Diffusion models enable high-quality and diverse visual content synthesis.
-            However, they struggle to generate rare or unseen concepts.
-            To address this challenge, we explore the usage of Retrieval-Augmented Generation (RAG) with image generation models.
-          <br>
-            We propose ImageRAG, a method that dynamically retrieves relevant images based on a given text prompt, and uses them as context to guide the generation process.
-            Prior approaches that used retrieved images to improve generation, trained models specifically for retrieval-based generation.
-            In contrast, ImageRAG leverages the capabilities of existing image conditioning models, and does not require RAG-specific training.
-            <br>
-            Our approach is highly adaptable and can be applied across different model types, showing significant improvement in generating rare and fine-grained concepts using different base models.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
-
-<section class="hero is-light is-small">
+<section class="hero is-small">
   <div class="hero-body">
-      <div class="container is-max-desktop is-centered has-text-centered">
-      <h2 class="title is-3">Method</h2>
-          <div class="content has-text-justified">
-            <p>
-              Given a text prompt &lt;p&gt;, we generate an initial image using a text-to-image (T2I) model.
-              Then, we generate retrieval-captions &lt;c<sub>j</sub>&gt;, retrieve images from an external database for each caption &lt;i<sub>j</sub>&gt;, and use them as references to the model for better generation.
-            </p>
-            <p>
-              Bottom part: the retrieval-caption generation block.
-              We use a VLM to decide if the initial image matches the given prompt.
-              If not, we ask it to list the missing concepts, and to create a caption that could be used to retrieve appropriate examples for each of these missing concepts.
-            </p>
-        </div>
+    <div class="container">
+
+      <div class="column is-centered has-text-centered">
+        <img src="static/figures/mdm_arch.png" alt="cars peace"/>
       </div>
-    </div>
+     
+    
+  </div>
+</div>
+</div>
 </section>
 
 <section class="hero is-small">
