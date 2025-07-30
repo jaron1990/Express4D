@@ -186,13 +186,44 @@
         <img src="static/images/teaser_2.png" alt="teaser" width="80%"/>
       </div>
     </div>
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Express4D is a new benchmark dataset designed to advance the generation of dynamic facial expressions from natural language. 
+            Unlike existing datasets that rely on speech or coarse emotion labels, Express4D provides over 1200 richly expressive 3D facial motion sequences, each paired with a fine-grained, free-text prompt.
+            These expressions were intentionally performed by real people in response to natural language instructions, and captured using the ARKit blendshape format with consumer-grade iPhones — enabling easy integration into animation pipelines.                    
+            To demonstrate the dataset’s potential, we trained and evaluated two baseline models (diffusion-based and VQ-based) for text-to-expression generation, using adapted metrics from human motion literature. 
+            Results show that Express4D enables plausible, semantically-aligned facial motion generation from text, while revealing current challenges in handling complex or multi-stage expressions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-3">Data Acquisition</h2>
+      </div>
+      <div class="columns is-mobile is-centered">
+        <div class="column has-text-centered">
+          <video autoplay muted loop playsinline width="80%">
+            <source src="data_capture.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
         <div class="container is-max-desktop">
             <div class="column is-centered has-text-centered">
                 <div class="content has-text-justified">
                     <p>
-                      Express4D is a new benchmark dataset designed to advance the generation of dynamic facial expressions from natural language. 
-                      Unlike existing datasets that rely on speech or coarse emotion labels, Express4D provides over 1200 richly expressive 3D facial motion sequences, each paired with a fine-grained, free-text prompt.
-                      These expressions were intentionally performed by real people in response to natural language instructions, and captured using the ARKit blendshape format with consumer-grade iPhones — enabling easy integration into animation pipelines.                    
+                      The Express4D dataset was created by generating diverse natural language prompts using ChatGPT, each describing a dynamic facial expression. 
+                      These prompts were then performed by 18 participants using the Live Link Face app on an iPhone with a TrueDepth camera, which captured 3D facial motion at 60 frames per second in the form of 61 ARKit blendshape coefficients per frame. 
+                      Each sequence is paired with its corresponding prompt and stored as a CSV file, making it lightweight and easy to use in training pipelines.
                     </p>
                 </div>
             </div>
@@ -201,6 +232,29 @@
 </section>
 
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="column is-centered has-text-centered">
+        <h2 class="title is-3">Data Acquisition</h2>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <img src="overview.jpg" alt="teaser" width="80%"/>
+      </div>
+    </div>
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <div class="content has-text-justified">
+                    <p>
+                      To evaluate facial motion generation on Express4D, we trained two baseline models adapted from leading text-to-human motion generation approaches: a diffusion-based transformer (MDM) and a VQ-VAE model (T2M-GPT). 
+                      Both models were trained to generate facial expressions from free-form text prompts and evaluated using standard metrics from human motion generation. 
+                      The results show that both models produce realistic and expressive outputs aligned with the input text, with each architecture excelling in different aspects, establishing Express4D as a strong benchmark for future research in text-to-expression generation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <section class="section" id="BibTeX">
