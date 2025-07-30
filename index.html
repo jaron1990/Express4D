@@ -159,7 +159,14 @@
             <div class="column is-four-fifths">
                 <div class="item">
                     <p style="margin-bottom: 30px">
-                        <iframe width="720" height="405" src="https://www.youtube.com/embed/BhBdkzao4kA"
+                        <!-- public SIGA -->
+                        <!--iframe width="720" height="405" src="https://www.youtube.com/embed/7mA14Jp9QNc"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe-->
+                        <!-- anonymous SIGA-->
+                        <iframe width="720" height="405" src="https://www.youtube.com/embed/NWOdkM5hAbE"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
@@ -170,9 +177,16 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-          Dynamic facial expression generation from natural language is a crucial task in Computer Graphics, with applications in Animation, Virtual Avatars, and Human-Computer Interaction. However, current generative models suffer from datasets that are either speech-driven or limited to coarse emotion labels, lacking the nuanced, expressive descriptions needed for fine-grained control, and were captured using elaborate and expensive equipment. 
-          We hence present a new dataset of facial motion sequences featuring nuanced performances and semantic annotation. The data is easily collected using commodity equipment and LLM-generated natural language instructions, in the popular ARKit blendshape format. This provides riggable motion, rich with expressive performances and labels. We accordingly train two baseline models, and evaluate their performance for future benchmarking. 
-          Using our Express4D dataset, the trained models can learn meaningful text-to-expression motion generation and capture the many-to-many mapping of the two modalities.
+                        Generating motion for arbitrary skeletons is a longstanding challenge in
+                        computer graphics, remaining largely unexplored due to the scarcity of diverse datasets and the irregular nature of the data. In this work, we introduce
+                        AnyTop, a diffusion model that generates motions for diverse characters
+                        with distinct motion dynamics, using only their skeletal structure as input. Our work features a transformer-based denoising network, tailored
+                        for arbitrary skeleton learning, integrating topology information into the
+                        traditional attention mechanism. Additionally, by incorporating textual joint
+                        descriptions into the latent feature representation, AnyTop learns semantic
+                        correspondences between joints across diverse skeletons. Our evaluation
+                        demonstrates that AnyTop generalizes well, even with as few as three training examples per topology, and can produce motions for unseen skeletons as
+                        well. Furthermore, our model's latent space is highly informative, enabling downstream tasks such as joint correspondence, temporal segmentation and motion editing.
                     </p>
                 </div>
             </div>
@@ -181,6 +195,29 @@
     </div>
 </section>
 
+
+<section class="section hero is-light">
+  <div class="container">
+    <div class="has-text-centered">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/BhBdkzao4kA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+      </div>
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Dynamic facial expression generation from natural language is a crucial task in Computer Graphics, with applications in Animation, Virtual Avatars, and Human-Computer Interaction. However, current generative models suffer from datasets that are either speech-driven or limited to coarse emotion labels, lacking the nuanced, expressive descriptions needed for fine-grained control, and were captured using elaborate and expensive equipment. 
+          We hence present a new dataset of facial motion sequences featuring nuanced performances and semantic annotation. The data is easily collected using commodity equipment and LLM-generated natural language instructions, in the popular ARKit blendshape format. This provides riggable motion, rich with expressive performances and labels. We accordingly train two baseline models, and evaluate their performance for future benchmarking. 
+          Using our Express4D dataset, the trained models can learn meaningful text-to-expression motion generation and capture the many-to-many mapping of the two modalities.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="hero is-small">
   <div class="hero-body">
