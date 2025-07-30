@@ -76,31 +76,82 @@
             <div class="publication-links">
               <span class="link-block">
                 <a href="arxiv_link"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <i class="ai ai-arxiv"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
                 <a href="https://github.com/jaron1990/Express4D/"
-                   class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-light">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                   </a>
               </span>
-
+              <span class="link-block">
+                <a href="contribute_link"
+                   class="external-link button is-normal is-rounded is-light">
+                  <span class="icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span>Contribute</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/BhBdkzao4kA?si=WmfjXg_0FAyWlErz" target="_blank" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div class="columns is-mobile is-centered">
+        <div class="column is-half has-text-centered">
+          <video autoplay muted loop playsinline width="80%">
+            <source src="MySlate_174_iPhone_cal_glenda.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half has-text-centered">
+          <video autoplay muted loop playsinline width="80%">
+            <source src="MySlate_212_iPhone_cal.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Second row -->
+      <div class="columns is-mobile is-centered">
+        <div class="column is-half has-text-centered">
+          <video autoplay muted loop playsinline width="80%">
+            <source src="MySlate_396_iPhone_cal.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column is-half has-text-centered">
+          <video autoplay muted loop playsinline width="80%">
+            <source src="MySlate_497_iPhone_cal.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+          Express4D dataset consists of facial motion ARKit-blendshapes coupled with fine-grained captions
+      </h2>
+    </div>
+  </div>
+</section>
+
 
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -126,7 +177,7 @@
           <p>
 Dynamic facial expression generation from natural language is a crucial task in Computer Graphics, with applications in Animation, Virtual Avatars, and Human-Computer Interaction. However, current generative models suffer from datasets that are either speech-driven or limited to coarse emotion labels, lacking the nuanced, expressive descriptions needed for fine-grained control, and were captured using elaborate and expensive equipment. 
 We hence present a new dataset of facial motion sequences featuring nuanced performances and semantic annotation. The data is easily collected using commodity equipment and LLM-generated natural language instructions, in the popular ARKit blendshape format. This provides riggable motion, rich with expressive performances and labels. We accordingly train two baseline models, and evaluate their performance for future benchmarking. Using 
-our Express4D dataset, the trained models can learn meaningful text-to-expression motion generation and capture the many-to-many mapping of the two modalities.
+our Express4D dataset, the trained models can learn meani=ngful text-to-expression motion generation and capture the many-to-many mapping of the two modalities.
 </p>
         </div>
       </div>
@@ -135,26 +186,45 @@ our Express4D dataset, the trained models can learn meaningful text-to-expressio
   </div>
 </section>
 
-
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-
       <div class="column is-centered has-text-centered">
-        <img src="static/figures/mdm_arch.png" alt="cars peace"/>
+        <h2 class="title is-3">Overview</h2>
       </div>
-     
-    
+      <div class="column is-centered has-text-centered">
+        <img src="static/images/teaser_2.png" alt="teaser" width="60%"/>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </section>
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="column is-centered has-text-centered">
+                <div class="content has-text-justified">
+                    <p>
+                        The input to AnyTop is a noised motion \( X_t\) and the skeleton \(S = \{ \mathcal{P}_\mathcal{S}, \mathcal{R}_\mathcal{S}, \mathcal{D}_\mathcal{S}, \mathcal{N}_\mathcal{S} \}\), where \(\mathcal{P}_\mathcal{S} \) refers to the rest-pose, \(\mathcal{R}_\mathcal{S}\) denotes joints' relations,
+                        \(\mathcal{D}_\mathcal{S}\) defines topological distances between each pair of joints and \(\mathcal{N}_\mathcal{S}\) denotes joint names. The Enrichment Block incorporates the skeletal features into the
+                        noised motion by concatenating the embedded \(\mathcal{P}_\mathcal{S}\) to the sequence as an additional temporal token and adding a T5-embedded name to each joint. The enriched motion is then passed
+                        through a stack of L Skeletal Temporal Transformer layers. We apply skeletal attention along the joint axis to capture interactions between all joints, and
+                        incorporate the topology information \(\mathcal{R}_\mathcal{S}\) and \(\mathcal{D}_\mathcal{S}\) to attention maps. Next, we apply temporal attention along the frame axis. Finally, the output is projected
+                        back to the motion features dimension, facilitating the reconstruction of the motion sequence.  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 <section class="hero is-small">
   <div class="hero-body">
       <div class="container is-max-desktop is-centered has-text-centered">
       <h2 class="title is-3">Rare Concept Generation</h2>
-          <div class="content has-text-justified">
+          <div class="content has-text-justified">\]=====
             <p>
               Examples of rare concept generation comparisons of SDXL and OmniGen with and without our method. <br>
               The left-most image column is the retrieved reference using ImageRAG for each prompt. <br>

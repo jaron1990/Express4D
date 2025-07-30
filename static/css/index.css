@@ -2,7 +2,17 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.video-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
+.video-row video {
+  width: 22%;
+  height: auto;
+}
 .footer .icon-link {
     font-size: 25px;
     color: #000;
