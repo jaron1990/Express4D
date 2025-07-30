@@ -173,7 +173,6 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
 </section>
 
@@ -184,24 +183,16 @@
         <h2 class="title is-3">Overview</h2>
       </div>
       <div class="column is-centered has-text-centered">
-        <img src="static/images/teaser_2.png" alt="teaser" width="60%"/>
+        <img src="static/images/teaser_2.png" alt="teaser" width="80%"/>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="hero is-small">
-    <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="column is-centered has-text-centered">
                 <div class="content has-text-justified">
                     <p>
-                        The input to AnyTop is a noised motion \( X_t\) and the skeleton \(S = \{ \mathcal{P}_\mathcal{S}, \mathcal{R}_\mathcal{S}, \mathcal{D}_\mathcal{S}, \mathcal{N}_\mathcal{S} \}\), where \(\mathcal{P}_\mathcal{S} \) refers to the rest-pose, \(\mathcal{R}_\mathcal{S}\) denotes joints' relations,
-                        \(\mathcal{D}_\mathcal{S}\) defines topological distances between each pair of joints and \(\mathcal{N}_\mathcal{S}\) denotes joint names. The Enrichment Block incorporates the skeletal features into the
-                        noised motion by concatenating the embedded \(\mathcal{P}_\mathcal{S}\) to the sequence as an additional temporal token and adding a T5-embedded name to each joint. The enriched motion is then passed
-                        through a stack of L Skeletal Temporal Transformer layers. We apply skeletal attention along the joint axis to capture interactions between all joints, and
-                        incorporate the topology information \(\mathcal{R}_\mathcal{S}\) and \(\mathcal{D}_\mathcal{S}\) to attention maps. Next, we apply temporal attention along the frame axis. Finally, the output is projected
-                        back to the motion features dimension, facilitating the reconstruction of the motion sequence.  
+                      Express4D is a new benchmark dataset designed to advance the generation of dynamic facial expressions from natural language. 
+                      Unlike existing datasets that rely on speech or coarse emotion labels, Express4D provides over 1200 richly expressive 3D facial motion sequences, each paired with a fine-grained, free-text prompt.
+                      These expressions were intentionally performed by real people in response to natural language instructions, and captured using the ARKit blendshape format with consumer-grade iPhones — enabling easy integration into animation pipelines.                    
                     </p>
                 </div>
             </div>
@@ -211,52 +202,15 @@
 
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-      <div class="container is-max-desktop is-centered has-text-centered">
-      <h2 class="title is-3">Rare Concept Generation</h2>
-          <div class="content has-text-justified">\]=====
-            <p>
-              Examples of rare concept generation comparisons of SDXL and OmniGen with and without our method. <br>
-              The left-most image column is the retrieved reference using ImageRAG for each prompt. <br>
-              OmniGen and SDXL both struggle with the uncommon concepts,
-              sometimes generating completely unrelated images. <br>
-              However, when using ImageRAG, both models generate the correct concepts.
-            </p>
-        </div>
-      </div>
-    </div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-      <div class="container is-max-desktop is-centered has-text-centered">
-      <h2 class="title is-3">Personalization</h2>
-          <div class="content has-text-justified">
-            <p>
-            ImageRAG can work in parallel with personalization methods and enhance their capabilities.
-              For example, although OmniGen can generate images of a subject based on an image, it struggles to generate some concepts.
-              Using references retrieved by our method, it can generate the required result, such as my cat teaching a class of dogs, on a mug, or built from lego.
-            </p>
-        </div>
-      </div>
-    </div>
-</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <p>If you find our work useful, please cite our paper:</p>
-    <pre><code>@misc{shalevarkushin2025imageragdynamicimageretrieval,
-      title={ImageRAG: Dynamic Image Retrieval for Reference-Guided Image Generation},
-      author={Rotem Shalev-Arkushin and Rinon Gal and Amit H. Bermano and Ohad Fried},
-      year={2025},
-      eprint={2502.09411},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2502.09411},
-}
-</code></pre>
+    <pre>
+      <code>enter bibtex
+      </code>
+    </pre>
   </div>
 </section>
 
