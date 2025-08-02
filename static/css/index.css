@@ -3,6 +3,35 @@ body {
 }
 
 
+.video-box {
+  display: inline-block;
+  width: 100%;
+  max-width: 480px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.video-box video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.video-box p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.video-box {
+  display: none; /* Hide all videos by default */
+}
+
+.video-box.active {
+  display: inline-block; /* Show only active ones */
+}
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;
