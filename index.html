@@ -291,135 +291,69 @@
     </div>
 </section>
 
-
-
-
-
-
-<section class="video-gallery hero ">
-    <h2 class="title is-3">Generations</h2>
-    <h2 class="title is-5">MDM based</h2>
-    <div id="gallery"></div>
-    <div class="controls">
-        <button onclick="prevSlide()">&#10094;</button>
-        <button onclick="nextSlide()">&#10095;</button>
-    </div>
-
-
-    <div class="modal" id="modal" onclick="closeModal()">
-        <video id="modalVideo"  autoplay></video>
-    </div>
-    <script>
-        const videoSources = [
-        "sample_0.mp4", 
-        "sample_9.mp4", 
-        "sample_2.mp4", 
-        "sample_14.mp4", 
-        "sample_3.mp4", 
-        "sample_15.mp4", 
-        "sample_5.mp4", 
-        "sample_8.mp4", 
-        "sample_16.mp4", 
-        ];
-        
-        const videoNames = [
-        "A person is pressing their lips together firmly and glancing sideways nervously", 
-        "A person is frowning slightly ",
-        "A person is furrowing their brows deeply and holding their mouth slightly open", 
-        "A person is exhaling quietly while their expression shifts from neutral to softly amused",
-        "A person is rolling their eyes dramatically and scoffing",
-        "A person is opening their mouth and closing it quickly ",
-        "A person is squinting briefly and then opening their eyes wide",
-        "A person is widening their eyes and looking up suddenly as if surprised",
-        "A person is softly nodding while maintaining a relaxed, even expression",
-
-        ];
-
-        let index = 0;
-        const videosPerView = 1;
-        const gallery = document.getElementById("gallery");
-        const videoElements = [];
-        
-        // Preload all videos once
-        function preloadVideos() {
-            videoSources.forEach((src, i) => {
-                const wrapper = document.createElement("div");
-                wrapper.classList.add("video-box");        
-                const video = document.createElement("video");
-                video.src = src;
-                video.autoplay = true;
-                video.loop = true;
-                video.muted = true;
-                video.oncontextmenu = () => false;
-                video.onclick = () => openModal(i);
-        
-                const caption = document.createElement("p");
-                caption.textContent = videoNames[i];
-        
-                wrapper.appendChild(video);
-                wrapper.appendChild(caption);
-                gallery.appendChild(wrapper);
-                videoElements.push(wrapper);
-            });
-        }
-        
-        // Only show 3 videos at a time
-        function updateGallery() {
-          videoElements.forEach((el, i) => {
-            const video = el.querySelector("video");
-            el.classList.remove("active");
-            video.pause(); // Stop all videos
-          });
-
-          for (let i = 0; i < videosPerView; i++) {
-            let videoIndex = (index + i) % videoSources.length;
-            const el = videoElements[videoIndex];
-            const video = el.querySelector("video");
-
-            el.classList.add("active");
-
-            // Restart video from the beginning
-            video.currentTime = 0;
-            video.play();
-          }
-        }
-
-
-        function nextSlide() {
-            index = (index + 1) % videoSources.length;
-            updateGallery();
-        }
-
-        function prevSlide() {
-            index = (index - 1 + videoSources.length) % videoSources.length;
-            updateGallery();
-        }
-
-        function openModal(startIndex) {
-            const modal = document.getElementById("modal");
-            const modalVideo = document.getElementById("modalVideo");
-            
-            modalVideo.src = videoSources[startIndex];
-            modalVideo.controlsList = "nodownload";
-modalVideo.oncontextmenu = () => false;
-
-            modal.style.display = "block";
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("modal");
-            const modalVideo = document.getElementById("modalVideo");
-            modal.style.display = "none";
-            modalVideo.pause();
-            modalVideo.src = ""; // Stop loading
-        }
-
-        preloadVideos();
-        updateGallery();
-    </script>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+      <div class="column is-centered has-text-centered">
+      	<p><b> “A person is pressing their lips together firmly and glancing sideways nervously.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_0.mp4"
+          type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-centered has-text-centered">
+      	<p><b>“A person is frowning slightly.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_9.mp4"
+          type="video/mp4">
+      </div>
+      <div class="column is-centered has-text-centered">
+      	<p><b>“A person is furrowing their brows deeply and holding their mouth slightly open.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_2.mp4"
+          type="video/mp4">
+      </div>
+            <div class="column is-centered has-text-centered">
+      	<p><b>“A person is exhaling quietly while their expression shifts from neutral to softly amused.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_14.mp4"
+          type="video/mp4">
+      </div>
+            <div class="column is-centered has-text-centered">
+      	<p><b>“A person is rolling their eyes dramatically and scoffing.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_3.mp4"
+          type="video/mp4">
+      </div>
+            <div class="column is-centered has-text-centered">
+      	<p><b>“A person is opening their mouth and closing it quickly.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_15.mp4"
+          type="video/mp4">
+      </div>
+            <div class="column is-centered has-text-centered">
+      	<p><b>“A person is squinting briefly and then opening their eyes wide.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_5.mp4"
+          type="video/mp4">
+      </div>
+            <div class="column is-centered has-text-centered">
+      	<p><b>“A person is widening their eyes and looking up suddenly as if surprised.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_8.mp4"
+          type="video/mp4">
+      </div>
+            <div class="column is-centered has-text-centered">
+      	<p><b>“A person is softly nodding while maintaining a relaxed, even expression.”</b></p>
+                <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
+          <source src="sample_16.mp4"
+          type="video/mp4">
+      </div>
+  </div>
+</div>
+</div>
 </section>
-
-
 
 
 <!-- BibTeX -->
