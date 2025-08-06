@@ -42,7 +42,38 @@
     <script src="static/js/index.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 </head>
+
+
+<style>
+  .columns.align-bottom {
+    align-items: flex-end;
+  }
+</style>
+
+<style>
+  @font-face {
+  font-family: 'Ink Free';
+  src: url('static/fonts/Inkfree.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.figcaption,
+figcaption {
+  font-family: 'Ink Free', cursive;
+  font-size: 1.4rem;
+  }
+  /* figcaption {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem; /* Adjust as needed: 1.5rem ≈ 24px */
+  /* } */
+  .example-section {
+      font-family: 'Ink Free', cursive;
+      font-size: 2rem;
+  }
+</style>
 
 <body>
 <section class="publication-header">
@@ -65,73 +96,72 @@
 </section>
 <section class="publication-author-block">
 
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <div class="columns is-centered">
-                <div class="column has-text-centered" -->
-<!--
-                    to anonimyze:
-                    1. remove author names (till "..indicates equal...")
-                    2. change link to video.
-                    3. remove bibtex reference.
--->
-                  <div class="column has-text-centered">
-                        <div class="is-size-4 publication-authors">
-                            <span class="author-block">
-                                <a href="https://www.linkedin.com/in/yaron-aloni-1a354b11a/">Yaron Aloni</a><sup>1</sup>,</span>
-                                <a href="https://rotem-shalev.github.io/rotemshalevarkushin/">Rotem Shalev-Arkushin</a><sup>1</sup>,</span>
-                                <a href="https://www.linkedin.com/in/yonatan-shafir-2811a3148/">Yonatan Shafir</a><sup>1</sup>,
-                                <br>
-                                <a href="https://guytevet.github.io/">Guy Tevet</a><sup>1</sup>,
-                                <a href="https://www.ohadf.com">Ohad Fried</a><sup>2</sup>,
-                                <a href="https://www.cs.tau.ac.il/~amberman">Amit H. Bermano</a><sup>1</sup>,
-                                <sup></sup></span>
-                        </div>
-                    </div>
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered" -->
+          <div class="column has-text-centered">
+            <div class="is-size-4 publication-authors">
+              <span class="author-block">
+                  <a href="https://www.linkedin.com/in/yaron-aloni-1a354b11a/">Yaron Aloni</a><sup>1</sup>,</span>
+                  <a href="https://rotem-shalev.github.io/rotemshalevarkushin/">Rotem Shalev-Arkushin</a><sup>1</sup>,</span>
+                  <a href="https://www.linkedin.com/in/yonatan-shafir-2811a3148/">Yonatan Shafir</a><sup>1</sup>,
+                  <br>
+                  <a href="https://guytevet.github.io/">Guy Tevet</a><sup>1</sup>,
+                  <a href="https://www.ohadf.com">Ohad Fried</a><sup>2</sup>,
+                  <a href="https://www.cs.tau.ac.il/~amberman">Amit H. Bermano</a><sup>1</sup>,
+                <sup></sup>
+              </span>
+            </div>
+          </div>
  
-
-
-        <div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Tel Aviv University,</span>
             <span class="author-block"><sup>2</sup>Reichman University</span>
-        </div>
- 
+          </div>
 
-                    <div class="column has-text-centered">
-                        <div class="publication-links">
-                            <span class="link-block">
-                            <!--a href="https://openreview.net/pdf?id=DrhZneqz4n" target="_blank" class="external-link button is-normal is-rounded"-->
-                            <!-- a href="https://arxiv.org/abs/2302.05905" target="_blank" class="external-link button is-normal is-rounded" -->
-                                <a href="arxiv_link" target="_blank" class="external-link button is-normal is-rounded is-light">
-                                    <span class="icon"><i class="ai ai-arxiv"></i></span>
-                                    <span>Paper</span>
-                                </a>
-                            </span>
 
-                            <span class="link-block">
-                                <a href="https://github.com/jaron1990/Express4D/" target="_blank" class="external-link button is-normal is-rounded is-light">
-                                    <span class="icon"><i class="fab fa-github"></i></span>
-                                    <span>Code</span>
-                                </a>
-                            </span>
-                            <span class="link-block">
-                                <a href="contribute_link" target="_blank" class="external-link button is-normal is-rounded is-light">
-                                    <span class="icon"><i class="fas fa-upload"></i></span>
-                                    <span>Contribute</span>
-                                </a>
-                            </span>
-                            <span class="link-block">
-                                <a href="https://youtu.be/BhBdkzao4kA?si=WmfjXg_0FAyWlErz" target="_blank" class="external-link button is-normal is-rounded is-light">
-                                    <span class="icon"><i class="fab fa-youtube"></i></span>
-                                    <span>Video</span>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+              <!--a href="https://openreview.net/pdf?id=DrhZneqz4n" target="_blank" class="external-link button is-normal is-rounded"-->
+              <!-- a href="https://arxiv.org/abs/2302.05905" target="_blank" class="external-link button is-normal is-rounded" -->
+                <a href="arxiv_link" target="_blank" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/jaron1990/Express4D/" target="_blank" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="data_link" target="_blank" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fas fa-database"></i></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="contribute_link" target="_blank" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fas fa-upload"></i></span>
+                  <span>Contribute</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://youtu.be/BhBdkzao4kA?si=WmfjXg_0FAyWlErz" target="_blank" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 
@@ -140,19 +170,19 @@
     <div class="hero-body">
 
       <!-- First row -->
-      <div class="columns is-mobile is-centered">
+      <div class="columns is-mobile is-centered align-bottom">
         <div class="column is-half has-text-centered">
           <figure>
-            <figcaption>A person is tilting their head slightly and then smiling softly</figcaption>
-            <video autoplay muted loop playsinline width="80%">
+            <figcaption><b>"A person is tilting their head slightly and then smiling softly"</b></figcaption>
+            <video autoplay muted loop playsinline width="100%">
               <source src="static/videos/MySlate_174_iPhone_cal_glenda.mp4" type="video/mp4">
             </video>
           </figure>
         </div>
         <div class="column is-half has-text-centered">
           <figure>
-            <figcaption>A person is opening their mouth wide</figcaption>
-            <video autoplay muted loop playsinline width="80%">
+            <figcaption><b>"A person is opening their<br>mouth wide"</b></figcaption>
+            <video autoplay muted loop playsinline width="100%">
               <source src="static/videos/MySlate_212_iPhone_cal.mp4" type="video/mp4">
             </video>
           </figure>
@@ -160,19 +190,19 @@
       </div>
 
       <!-- Second row -->
-      <div class="columns is-mobile is-centered">
+      <div class="columns is-mobile is-centered align-bottom">
         <div class="column is-half has-text-centered">
           <figure>
-            <figcaption>A person is rolling their eyes and then relaxing their face</figcaption>
-            <video autoplay muted loop playsinline width="80%">
+            <figcaption><b>"A person is rolling their eyes and then relaxing their face"</b></figcaption>
+            <video autoplay muted loop playsinline width="100%">
               <source src="static/videos/MySlate_396_iPhone_cal.mp4" type="video/mp4">
             </video>
           </figure>
         </div>
         <div class="column is-half has-text-centered">
           <figure>
-            <figcaption>A person is glancing sideways and then smiling softly</figcaption>
-            <video autoplay muted loop playsinline width="80%">
+            <figcaption><b>"A person is glancing sideways and then smiling softly"</b></figcaption>
+            <video autoplay muted loop playsinline width="100%">
               <source src="static/videos/MySlate_497_iPhone_cal.mp4" type="video/mp4">
             </video>
           </figure>
@@ -306,7 +336,7 @@
     </div>
 </section>
 
-<section class="hero is-small is-light">
+<section class="hero is-small is-light example-section">
   <div class="hero-body">
     <div class="container">
       <div class="column is-centered has-text-centered">
@@ -316,56 +346,56 @@
 
       <div id="results-carousel" class="carousel results-carousel">
       <div class="column is-centered has-text-centered">
-      	<p><b> “A person is pressing their lips together firmly and glancing sideways nervously.”</b></p>
+      	<p> “A person is pressing their lips together firmly and glancing sideways nervously.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_0.mp4"
           type="video/mp4">
         </video>
       </div>
       <div class="column is-centered has-text-centered">
-      	<p><b>“A person is frowning slightly.”</b></p>
+      	<p>“A person is frowning slightly.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_9.mp4"
           type="video/mp4">
       </div>
       <div class="column is-centered has-text-centered">
-      	<p><b>“A person is furrowing their brows deeply and holding their mouth slightly open.”</b></p>
+      	<p>“A person is furrowing their brows deeply and holding their mouth slightly open.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_2.mp4"
           type="video/mp4">
       </div>
             <div class="column is-centered has-text-centered">
-      	<p><b>“A person is exhaling quietly while their expression shifts from neutral to softly amused.”</b></p>
+      	<p>“A person is exhaling quietly while their expression shifts from neutral to softly amused.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_14.mp4"
           type="video/mp4">
       </div>
             <div class="column is-centered has-text-centered">
-      	<p><b>“A person is rolling their eyes dramatically and scoffing.”</b></p>
+      	<p>“A person is rolling their eyes dramatically and scoffing.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_3.mp4"
           type="video/mp4">
       </div>
             <div class="column is-centered has-text-centered">
-      	<p><b>“A person is opening their mouth and closing it quickly.”</b></p>
+      	<p>“A person is opening their mouth and closing it quickly.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_15.mp4"
           type="video/mp4">
       </div>
             <div class="column is-centered has-text-centered">
-      	<p><b>“A person is squinting briefly and then opening their eyes wide.”</b></p>
+      	<p>“A person is squinting briefly and then opening their eyes wide.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_5.mp4"
           type="video/mp4">
       </div>
             <div class="column is-centered has-text-centered">
-      	<p><b>“A person is widening their eyes and looking up suddenly as if surprised.”</b></p>
+      	<p>“A person is widening their eyes and looking up suddenly as if surprised.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_8.mp4"
           type="video/mp4">
       </div>
             <div class="column is-centered has-text-centered">
-      	<p><b>“A person is softly nodding while maintaining a relaxed, even expression.”</b></p>
+      	<p>“A person is softly nodding while maintaining a relaxed, even expression.”</p>
                 <video poster="" id="tree" playsinline autoplay controls muted loop height="100%">
           <source src="static/videos/sample_16.mp4"
           type="video/mp4">
