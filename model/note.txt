@@ -1,0 +1,7 @@
+Note: please put the downloaded FLAME models (female_model.pkl, male_model.pkl, generic_model.pkl) files here.
+You can download the models from http://flame.is.tue.mpg.de/.
+In order to get access to the model, you need to sign up and agree to the model license.
+
+the file flame_static_embedding.pkl can be obtained from 
+https://github.com/TimoBolkart/TF_FLAME/blob/master/data/flame_static_embedding.pkl
+ALTHOUGH we are not certain this embedding suits us/
