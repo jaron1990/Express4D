@@ -198,7 +198,7 @@ def split_train_test(dataset_dir = 'dataset/Express4D', train_part=0.8):
 
 
 
-def create_text_files_from_single_file(orig_text_file = 'dataset/Express4D/labels.txt', output_dir = 'dataset/Express4D/labels'):
+def create_text_files_from_single_file(orig_text_file = 'dataset/Express4D/texts.txt', output_dir = 'dataset/Express4D/texts'):
     with open(orig_text_file, 'r') as file:
         for i, line in enumerate(file):
             new_name = f'MySlate_{(i+1):0d}_iPhone_cal.txt'
