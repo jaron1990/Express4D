@@ -7,9 +7,41 @@ The official PyTorch implementation of the paper [**"Express4D: Expressive, Frie
 
 Please visit our [**webpage**](https://jaron1990.github.io/Express4D/) for more details.
 
-![teaser](https://jaron1990.github.io/Express4D/static/images/teaser_2.png)
 
-
+<table align="center">
+  <tr>
+    <td align="center" width="45%">
+      <div style="font-size:0.9em; font-weight:300; color:#ddd; margin-bottom:4px;">
+        "A person is tilting their head slightly and then smiling softly"
+      </div>
+      <video src="https://jaron1990.github.io/Express4D/static/videos/MySlate_174_iPhone_cal_glenda.mp4"
+             autoplay loop muted playsinline width="100%"></video>
+    </td>
+    <td align="center" width="45%">
+      <div style="font-size:0.9em; font-weight:300; color:#ddd; margin-bottom:4px;">
+        "A person is opening their mouth wide"
+      </div>
+      <video src="https://jaron1990.github.io/Express4D/static/videos/MySlate_212_iPhone_cal.mp4"
+             autoplay loop muted playsinline width="100%"></video>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="45%">
+      <div style="font-size:0.9em; font-weight:300; color:#ddd; margin-bottom:4px;">
+        "A person is rolling their eyes and then relaxing their face"
+      </div>
+      <video src="https://jaron1990.github.io/Express4D/static/videos/MySlate_396_iPhone_cal.mp4"
+             autoplay loop muted playsinline width="100%"></video>
+    </td>
+    <td align="center" width="45%">
+      <div style="font-size:0.9em; font-weight:300; color:#ddd; margin-bottom:4px;">
+        "A person is glancing sideways and then smiling softly"
+      </div>
+      <video src="https://jaron1990.github.io/Express4D/static/videos/MySlate_497_iPhone_cal.mp4"
+             autoplay loop muted playsinline width="100%"></video>
+    </td>
+  </tr>
+</table>
 ## Bibtex
 
 If you find this code useful in your research, please cite:
