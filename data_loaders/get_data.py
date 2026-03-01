@@ -58,7 +58,13 @@ def get_dataset(name, num_frames, split='train', hml_mode='generator', data_mode
 
 def get_dataset_loader(name, batch_size, num_frames, split='train', hml_mode='generator', data_mode='landmarks', normalize_data=False, classifier_step=15, minimum_frames=60, debug=False, smoothing_filter_length = 7, add_velocities=False, add_landmarks_diffs = False, max_len=196, flip_face_on=False, fps=20, max_motions=-1, shuffle=True):
     # dataset = get_dataset(name, num_frames, split, hml_mode, 'landmarks_68', normalize_data) #FIXME: !!! not good
-    dataset = get_dataset(name, num_frames, split, hml_mode, data_mode, normalize_data, classifier_step=classifier_step, minimum_frames=minimum_frames, debug=debug, smoothing_filter_length=smoothing_filter_length, add_velocities=add_velocities, add_landmarks_diffs=add_landmarks_diffs, max_len=max_len, flip_face_on=flip_face_on, fps=fps, max_motions=max_motions) #FIXME: !!! not good
+    try:
+        dataset = get_dataset(name, num_frames, split, hml_mode, data_mode, normalize_data, classifier_step=classifier_step, minimum_frames=minimum_frames, debug=debug, smoothing_filter_length=smoothing_filter_length, add_velocities=add_velocities, add_landmarks_diffs=add_landmarks_diffs, max_len=max_len, flip_face_on=flip_face_on, fps=fps, max_motions=max_motions) #FIXME: !!! not good
+    except:
+        error = 'Unable to load dataset [{}] with data_mode [{}]\n'.format(name, data_mode)
+        error += 'check if dataset is under dataset/Express4D'
+        raise ValueError(error)
+
     collate = get_collate_fn(name, hml_mode)
 
     loader = DataLoader(
