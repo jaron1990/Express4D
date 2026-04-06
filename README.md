@@ -45,7 +45,7 @@ pip install git+https://github.com/GuyTevet/smplx.git
 ### 2. Download Express4D dataset
 
 1. fill the google form: https://forms.gle/uSgMH7J6cpPC4oMY9
-2. Copy all folders and files to <ROOT>/dataset/
+2. Copy all folders and files to <ROOT>/dataset/Express4D/
 
 ### 3. download models:
 1. trained model from: https://drive.google.com/drive/u/4/folders/1-FBG3nDVhJ0IHTJiT_mWRm0UJRsKfxws
